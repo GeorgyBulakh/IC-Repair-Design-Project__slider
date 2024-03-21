@@ -1,0 +1,252 @@
+/* RESET */
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+
+	color: #363636;
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+}
+
+
+/* TECHNICAL STYLES */
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1263px;
+
+	margin: 0 auto;
+}
+
+.subtitle {
+	color: #E3B873;
+	font-family: "Yeseva One", serif;
+	font-size: 27px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 138.6%;
+	letter-spacing: -1.89px;
+	text-transform: uppercase;
+}
+
+
+/* MAIN */
+
+.slider {
+	padding: 107px 0 416px;
+
+	background: #131313;
+}
+
+.slider__container {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+	grid-template-rows: 22px 1fr;
+	row-gap: 45px;
+	column-gap: 50px;
+}
+
+.slider__pagination {
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+
+	display: flex;
+	gap: 60.5px;
+}
+
+.slider__pagination input[type=radio] {
+	display: none;
+}
+
+.slider__pagination label {
+	color: rgba(255, 255, 255, 0.30);
+	font-family: "Yeseva One", serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 138.6%;
+	text-transform: uppercase;
+	
+	cursor: pointer;
+}
+
+.slider__pagination input[type=radio]:checked + label {
+	padding-bottom: 6px;
+
+	color: #E3B873;
+
+	border-bottom: 1px solid #E3B873;
+
+	transition: 0.3s;
+}
+
+.slider__container_text {
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	align-self: stretch;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.slider__text {
+	margin: 34px 0 42px;
+
+	color: #FFF;
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 190.96%;
+}
+
+.slider__data {
+	flex: 1 1 auto;
+
+	display: grid;
+	grid-template-rows: 107px auto;
+	grid-template-areas:
+		"city apartment"
+		"time cost";
+}
+
+.data__item_1 {
+	grid-area: city;
+}
+
+.data__item_2 {
+	grid-area: apartment;
+}
+
+.data__item_3 {
+	grid-area: time;
+}
+
+.data__item_4 {
+	grid-area: cost;
+}
+
+.data__subtitle {
+	color: #E3B873;
+	font-family: "Yeseva One", serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 138.6%;
+	text-transform: uppercase;
+}
+
+.data__value {
+	display: none;
+}
+
+.data__value_active {
+	display: inline;
+
+	color: #FFF;
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 163.68%;
+}
+
+.slider__img {
+	display: none;
+}
+
+.slider__img_active {
+	display: inline;
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+	place-self: stretch stretch;
+
+	width: 725px;
+	height: 500px;
+}
+
+/* toggle */
+
+.slider__toggle {
+	display: flex;
+	gap: 29px;
+}
+
+.toggle__button{
+	background: none;
+	border: none;
+
+	display: flex;
+	align-items: center;
+}
+
+.toggle__pagination {
+	display: flex;
+	align-items: center;
+	gap: 17px;
+}
+
+.toggle__pagination input[type=radio] {
+	display: none;
+}
+
+.toggle__pagination label {
+	display: inline-block;
+
+	width: 9px;
+	height: 9px;
+
+	background-color: rgba(255, 255, 255, 0.30);
+
+	border-radius: 50%;
+
+	cursor: pointer;
+}
+
+
+.toggle__pagination input[type=radio]:checked + label {
+	background-color: #FFF;
+
+	transition: 0.3s;
+}
